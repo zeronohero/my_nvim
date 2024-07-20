@@ -1,5 +1,8 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "cmp",
+        "capabilites",
+        "dependencies"
     ]
 }
