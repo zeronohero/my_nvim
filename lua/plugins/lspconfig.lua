@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer", "html", "cssls", "psalm"},
+				ensure_installed = { "lua_ls", "rust_analyzer", "html", "cssls", "psalm", "clangd"},
 				automatic_installation = true,
 			})
 		end,
@@ -43,6 +43,10 @@ return {
 
       lspconfig.psalm.setup({
 				capabilities = capabilities,
+      })
+
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
       })
 
 			local opts = { noremap = true, silent = true }
